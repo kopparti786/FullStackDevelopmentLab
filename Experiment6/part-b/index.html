@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>JavaScript Output Examples</title>
+</head>
+<body>
+    <h1>Different Ways to Display Output in JavaScript</h1>
+
+    <p id="output1"></p>
+    <p id="output2"></p>
+
+    <script>
+        // 1. alert()
+        alert("This is an alert box!");
+
+        // 2. console.log()
+        console.log("This message is shown in the console.");
+
+        // 3. document.write()
+        document.write("<p>This is written directly on the webpage using document.write()</p>");
+
+        // 4. innerHTML
+        document.getElementById("output1").innerHTML = "This text is displayed using innerHTML.";
+
+        // 5. innerText or textContent (alternative)
+        document.getElementById("output2").textContent = "This text is displayed using textContent.";
+    </script>
+</body>
+</html>
