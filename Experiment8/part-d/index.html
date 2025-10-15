@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head><title>Loops with Object and Array</title></head>
+<body>
+  <h2>Looping Through Object and Array</h2>
+  <button onclick="loopDemo()">Run Loop Demo</button>
+  <div id="loopData"></div>
+
+  <script>
+    function loopDemo() {
+      let obj = {name: "Vani", age: 25, city: "Bobbili"};
+      let arr = ["Apple", "Banana", "Cherry"];
+
+      let output = "<strong>for-in loop on object:</strong><br>";
+      for(let key in obj) {
+        output += key + ": " + obj[key] + "<br>";
+      }
+
+      output += "<br><strong>forEach loop on array:</strong><br>";
+      arr.forEach(function(item, index) {
+        output += index + ": " + item + "<br>";
+      });
+
+      output += "<br><strong>for-of loop on array:</strong><br>";
+      for(let fruit of arr) {
+        output += fruit + "<br>";
+      }
+
+      document.getElementById('loopData').innerHTML = output;
+    }
+  </script>
+</body>
+</html>

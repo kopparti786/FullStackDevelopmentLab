@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head><title>Denomination Calculator</title></head>
+<body>
+  <h2>Denomination of Amount</h2>
+  <button onclick="calculateDenomination()">Enter Amount</button>
+  <div id="denominationResult"></div>
+
+  <script>
+    function calculateDenomination() {
+      let amount = parseInt(prompt("Enter the deposited amount:"));
+      let denominations = [100, 50, 20, 10, 5, 2, 1];
+      let result = "";
+
+      for(let denom of denominations) {
+        let count = Math.floor(amount / denom);
+        if(count > 0) {
+          result += count + " - " + denom + "'s, ";
+          amount %= denom;
+        }
+      }
+
+      // Remove trailing comma and space
+      result = result.slice(0, -2);
+
+      document.getElementById('denominationResult').innerHTML = "Denominations: " + result;
+    }
+  </script>
+</body>
+</html>
